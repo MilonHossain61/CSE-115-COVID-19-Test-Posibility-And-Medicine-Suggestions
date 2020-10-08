@@ -249,15 +249,20 @@ int func(int arr[])
     int b [] = {2,2,2,2,2,2,2,2};
 
     int flag1;
+    int count1=0;
 
-    for (int i=0; i<4; i++)
+    for (int i=0; i<8; i++)
     {
         if (arr[i]==a[i])
-        {flag1 = 0;}
+        {   count1++;
+            if(count1>4)
+                flag1 = 0;
+        }
 
         else if (arr[i]==b[i])
         {flag1=1;}
     }
+
 
     if (flag1==0)
     {
